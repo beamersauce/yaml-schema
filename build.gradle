@@ -1,0 +1,29 @@
+plugins {
+	id 'application'
+}
+
+application {
+	mainClass = 'com.beamersauce.yamlschema.YamlSchemaCommand'
+}
+
+group = 'com.beamersauce'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.everit.json:org.everit.json.schema:1.5.1'
+	implementation 'info.picocli:picocli:4.5.1'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.3'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.11.3'
+
+	compileOnly 'org.projectlombok:lombok:1.18.14'
+	annotationProcessor 'org.projectlombok:lombok:1.18.14'
+}
+
+test {
+	useJUnitPlatform()
+}
