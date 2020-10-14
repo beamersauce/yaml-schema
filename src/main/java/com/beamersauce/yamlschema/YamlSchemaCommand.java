@@ -40,7 +40,6 @@ public class YamlSchemaCommand implements Runnable {
     @SneakyThrows
     @Override
     public void run() {
-        //TODO should I be using a logger instead of system.out?
         logger.info("Validating data file: " + dataFilePath + " against schema file: " + schemaFilePath);
 
         // Read in files - convert to JSON
